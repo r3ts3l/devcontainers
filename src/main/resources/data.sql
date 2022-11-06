@@ -1,0 +1,1 @@
+insert into profile(username) values('admin');

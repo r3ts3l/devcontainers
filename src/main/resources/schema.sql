@@ -1,0 +1,1 @@
+create table if not exists profile (id serial primary key, username VARCHAR(255) NOT NULL);
