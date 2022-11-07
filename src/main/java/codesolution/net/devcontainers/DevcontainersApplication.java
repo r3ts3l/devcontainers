@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DevcontainersApplication {
 
     public static void main(String[] args) {
-        if (System.getenv("ENV").equals("local")) {
+        if ("local".equals(System.getProperty("ENV"))) {
             DevcontainerInitializer.getProperties().forEach((k, v) -> System.setProperty(k, String.valueOf(v)));
         }
         SpringApplication.run(DevcontainersApplication.class, args);
